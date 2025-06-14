@@ -1,17 +1,42 @@
 ---
 import Copyright from "./Copyright.astro";
+import vagarLogo from "../assets/LogoVagarHome.png";
 ---
 
-<div><p>Footer</p></div>
+<div>
+    <div>Seguinos en nuestras redes - Iconos RRSS</div>
 
-<nav>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-    </ul>
-</nav>
-
-<Copyright />
+    <footer
+        class="footer sm:footer-horizontal bg-base-200 text-base-content p-10"
+    >
+        <aside>
+            <a href="https://vagar.com.ar/">
+                <img src={vagarLogo.src} width="150" alt="Vagar Homepage" />
+            </a>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Propiedades más buscadas</h6>
+            <a class="link link-hover">Vista Alta</a>
+            <a class="link link-hover">Rincón Del Arroyo</a>
+            <a class="link link-hover">La Barranca</a>
+            <a class="link link-hover">Calma</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Enlaces Útiles</h6>
+            <a class="link link-hover" href="/Chalets">Chalets en alquiler</a>
+            <a class="link link-hover" href="/Mapa">Mapa</a>
+            <a class="link link-hover" href="/Disponibilidad">Disponibilidad</a>
+            <a class="link link-hover" href="/Novedades">Novedades</a>
+            <a class="link link-hover" href="/Blog">Blog</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Contacto</h6>
+            <p>Chumamaya 2100, Merlo, Argentina</p>
+            <p>
+                <a href="mailto:reservas@vagar.com.ar">reservas@vagar.com.ar</a>
+                <p>Tel: 02656 - 476500</p>
+            </p>
+        </nav>
+    </footer>
+    <Copyright />
+</div>
