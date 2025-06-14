@@ -1,5 +1,12 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    // Configuración básica de Astro
+    site: 'https://example.com', // Opcional: tu dominio o URL base
+    // Puedes agregar aquí integraciones como Tailwind, MDX, etc.
+
+    vite: {
+        plugins: [tailwindcss()],
+    },
+});
