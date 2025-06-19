@@ -1,5 +1,6 @@
 ---
 import NavBar from "./NavBar.astro";
+const envLabel = import.meta.env.VITE_ENV_LABEL;
 ---
 
 <header
@@ -9,7 +10,7 @@ import NavBar from "./NavBar.astro";
     <div
         class="max-w-7xl mx-auto flex items-center justify-between px-3 transition-all duration-300"
     >
-        <p>DEV</p>
+        {envLabel && <span>{envLabel}</span>}
         <NavBar />
     </div>
 </header>
