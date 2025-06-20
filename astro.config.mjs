@@ -1,12 +1,18 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
-    // Configuración básica de Astro
-    site: 'https://example.com', // Opcional: tu dominio o URL base
-    // Puedes agregar aquí integraciones como Tailwind, MDX, etc.
+import solidJs from '@astrojs/solid-js';
 
-    vite: {
-        plugins: [tailwindcss()],
-    },
+export default defineConfig({
+  // Configuración básica de Astro
+  // Opcional: tu dominio o URL base
+  site: 'https://example.com',
+
+  // Puedes agregar aquí integraciones como Tailwind, MDX, etc.
+
+  vite: {
+      plugins: [tailwindcss()],
+  },
+
+  integrations: [solidJs()],
 });

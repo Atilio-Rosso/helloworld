@@ -9,9 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/solid-js": "^5.1.0",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.2",
-    "daisyui": "^5.0.43"
+    "daisyui": "^5.0.43",
+    "solid-js": "^1.9.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
