@@ -1,6 +1,14 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Copyright from "../components/Copyright.astro";
 import PanelAdmin from "../components/PanelAdmin.tsx";
 ---
 
-<h1>Administración</h1>
-<PanelAdmin client:load />
+<Layout>
+    <Header />
+    <PanelAdmin client:load />
+    <Footer />
+    <Copyright />
+</Layout>
