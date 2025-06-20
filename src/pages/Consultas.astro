@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import FormularioConsultas from "../components/FormularioConsultas.tsx";
 import Footer from "../components/Footer.astro";
 import Copyright from "../components/Copyright.astro";
 ---
 
 <Layout>
     <Header />
-    <p>Mapa Chalets</p>
+    <FormularioConsultas client:load />
     <Footer />
     <Copyright />
 </Layout>
