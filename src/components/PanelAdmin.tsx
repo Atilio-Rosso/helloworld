@@ -36,10 +36,11 @@ export default function PanelAdmin() {
     };
 
     return (
-        <div>
+        <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+            <h1>Administraci&oacute;n</h1>
             <h2>Panel de Consultas</h2>
             <Show when={consultas()} fallback={<p>Cargando...</p>}>
-                <table border="1">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -97,13 +98,13 @@ export default function PanelAdmin() {
                                         when={editandoId() === consulta.id}
                                         fallback={
                                             <>
-                                                <button onClick={() => handleEdit(consulta)}>Editar</button>
-                                                <button onClick={() => handleDelete(consulta.id)}>Eliminar</button>
+                                                <button class="btn btn-outline" onClick={() => handleEdit(consulta)}>Editar</button>
+                                                <button class="btn btn-outline" onClick={() => handleDelete(consulta.id)}>Eliminar</button>
                                             </>
                                         }
                                     >
-                                        <button onClick={() => handleSave(consulta.id)}>Guardar</button>
-                                        <button onClick={() => setEditandoId(null)}>Cancelar</button>
+                                        <button class="btn btn-outline" onClick={() => handleSave(consulta.id)}>Guardar</button>
+                                        <button class="btn btn-outline" onClick={() => setEditandoId(null)}>Cancelar</button>
                                     </Show>
                                 </td>
                             </tr>
