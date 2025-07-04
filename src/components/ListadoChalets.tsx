@@ -1,17 +1,25 @@
-import { createSignal, createResource, Show } from 'solid-js';
+import { createResource, createEffect, Show } from 'solid-js';
+import { listadoTrigger } from '../lib/listadoTrigger';
+
+const API_BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
 
 const fetchCasas = async () => {
-    const res = await fetch('http://localhost:3001/casas');
+    const res = await fetch(`${API_BASE_URL}/casas`);
     return res.json();
 };
 
 export default function ListadoChalets() {
     const [casas, { refetch }] = createResource(fetchCasas);
 
-    return (
-        <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
-            <h1>Listado Chalets</h1>
+    // Reaccionamos al trigger global
+    createEffect(() => {
+        listadoTrigger(); // dependencia reactiva
+        refetch();
+    });
 
+    return (
+        <div class="flex-1 bg-gray-200 p-4 rounded">
+            <h1>Listado Chalets</h1>
             <Show when={casas()} fallback={<p>Cargando...</p>}>
                 <table class="table">
                     <thead>
@@ -29,30 +37,14 @@ export default function ListadoChalets() {
                     <tbody>
                         {casas().map((casa) => (
                             <tr>
-                                <td>
-                                    <p>{casa.nombre}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.puntaje}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.precioAlta}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.precioMedia}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.precioBaja}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.cantHuespedes}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.cantAmbientes}</p>
-                                </td>
-                                <td>
-                                    <p>{casa.cantBanios}</p>
-                                </td>
+                                <td>{casa.nombre}</td>
+                                <td>{casa.puntaje}</td>
+                                <td>{casa.precioAlta}</td>
+                                <td>{casa.precioMedia}</td>
+                                <td>{casa.precioBaja}</td>
+                                <td>{casa.cantHuespedes}</td>
+                                <td>{casa.cantAmbientes}</td>
+                                <td>{casa.cantBanios}</td>
                             </tr>
                         ))}
                     </tbody>

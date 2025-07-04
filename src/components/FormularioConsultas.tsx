@@ -1,5 +1,7 @@
 import { createSignal } from 'solid-js';
 
+const API_BASE_URL = import.meta.env.PUBLIC_API_BASE_URL
+
 export default function FormularioConsulta() {
     const [mensaje, setMensaje] = createSignal('');
 
@@ -13,7 +15,7 @@ export default function FormularioConsulta() {
             mensaje: form.mensaje.value
         };
 
-        const res = await fetch('http://localhost:3001/consultas', {
+        const res = await fetch(`${API_BASE_URL}/consultas`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

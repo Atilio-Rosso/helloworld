@@ -1,4 +1,5 @@
 ---
+import BuscadorDisponibilidaHeader from "./BuscadorDisponibilidadHeader";
 import NavBar from "./NavBar.astro";
 const envLabel = import.meta.env.VITE_ENV_LABEL;
 ---
@@ -7,12 +8,12 @@ const envLabel = import.meta.env.VITE_ENV_LABEL;
     id="site-header"
     class="sticky top-0 z-50 transition-all duration-300 bg-white/20 backdrop-blur-md shadow-md py-2"
 >
-    <div
-        class="max-w-7xl mx-auto flex items-center justify-between px-3 transition-all duration-300"
-    >
-        {envLabel && <span>Env: {envLabel}</span>}
+    <div>
+        <!-- {envLabel && <span>Env: {envLabel}</span>} -->
         <NavBar />
     </div>
+
+    <BuscadorDisponibilidaHeader />
 </header>
 
 <script is:raw>

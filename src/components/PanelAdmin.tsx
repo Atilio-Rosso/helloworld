@@ -1,8 +1,10 @@
 // src/components/PanelAdmin.tsx
 import { createSignal, createResource, Show } from 'solid-js';
 
+const API_BASE_URL = import.meta.env.PUBLIC_API_BASE_URL
+
 const fetchConsultas = async () => {
-    const res = await fetch('http://localhost:3001/consultas');
+    const res = await fetch(`${API_BASE_URL}/consultas`);
     return res.json();
 };
 
@@ -17,7 +19,7 @@ export default function PanelAdmin() {
     };
 
     const handleSave = async (id: number) => {
-        await fetch(`http://localhost:3001/consultas/${id}`, {
+        await fetch(`${API_BASE_URL}/consultas/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData())
