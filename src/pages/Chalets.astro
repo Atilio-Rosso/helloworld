@@ -1,13 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Copyright from "../components/Copyright.astro";
+import FormularioAltaChalets from "../components/FormularioAltaChalets.tsx";
+import ListadoChalets from "../components/ListadoChalets.tsx";
 ---
 
 <Layout>
-    <Header />
-    <p>Chalets</p>
-    <Footer />
-    <Copyright />
+    <div class="flex flex-col md:flex-row gap-4">
+        <FormularioAltaChalets client:load />
+        <ListadoChalets client:load />
+    </div>
 </Layout>

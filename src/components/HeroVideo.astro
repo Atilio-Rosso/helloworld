@@ -1,6 +1,6 @@
 <section class="relative h-screen w-full overflow-hidden">
     <video
-        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        class="absolute top-0 left-0 w-full h-full object-cover"
         autoplay
         muted
         loop
@@ -8,43 +8,17 @@
         preload="auto"
         poster="fallback.jpg"
     >
-        <source src="../public/Video.mp4" type="video/mp4" />
-        <source src="../public/video.webm" type="video/webm" />
+        <source src="/videos/Video.mp4" type="video/mp4" />
+        <source src="/videos/video.webm" type="video/webm" />
         Tu navegador no soporta videos HTML5.
     </video>
 
-    <div class="hero-content">
-        <h1>Bienvenidos a Vagar Vacaciones</h1>
-        <p>Descubre una experiencia inolvidable</p>
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <h1 class="text-white text-4xl md:text-6xl font-bold text-center px-4">
+            Bienvenidos a Vagar Vacaciones
+        </h1>
+        <h2 class="text-white text-2xl md:text-lg font-bold text-center px-4">
+            Descubre una experiencia inolvidable
+        </h2>
     </div>
 </section>
-
-<style>
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 3em;
-        margin-top: 200px;
-    }
-
-    .hero-content p {
-        font-size: 1.5em;
-    }
-
-    /* Ocultar video y mostrar imagen en móviles si es necesario */
-    @media (max-width: 768px) {
-        .hero-video {
-            display: none;
-        }
-
-        .hero-section {
-            background: url("fallback.jpg") center center / cover no-repeat;
-        }
-    }
-</style>

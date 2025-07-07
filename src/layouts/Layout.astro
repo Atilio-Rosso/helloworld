@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Copyright from "../components/Copyright.astro";
+import WhatsappButton from "../components/WhatsappButton.astro";
 ---
 
 <!doctype html>
@@ -12,6 +16,10 @@ import "../styles/global.css";
 		<title>Vagar Vacaciones</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<WhatsappButton />
+		<Footer />
+		<Copyright />
 	</body>
 </html>

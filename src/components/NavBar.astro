@@ -2,35 +2,31 @@
 import vagarLogo from "../assets/LogoVagarHome.png";
 ---
 
-<div class="navbar bg-transparent shadow-sm w-full">
+<div class="navbar bg-transparent w-full">
     <div class="flex-1">
-        <!-- 
-        <a href="https://vagar.com.ar/">
-            <img src={vagarLogo.src} width="150" alt="Vagar Homepage" />
+        <a href="/">
+            <img src={vagarLogo.src} alt="Vagar Homepage" width="200" />
         </a>
-        -->
     </div>
     <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
-            <li><a>Inicio</a></li>
-            <li><a href="/Chalets">Chalets en Alquiler</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/Galeria">Chalets en Alquiler</a></li>
             <li><a href="/Disponibilidad">Disponibilidad</a></li>
             <li><a href="/MapaChalets">Mapa Chalets</a></li>
-            <li><a href="/Galeria">Galer&iacute;a</a></li>
             <li><a href="/ElCountry">El Country</a></li>
-
+            <li><a href="/Consultas">Consultas</a></li>
             <li>
                 <details>
                     <summary>
-                        <a href="/Chalets">Chalets en Alquiler</a>
+                        <a href="">Admin</a>
                     </summary>
                     <ul class="bg-base-100 rounded-t-none p-2">
-                        <li><a href="/Disponibilidad">Disponibilidad</a></li>
-                        <li><a href="/MapaChalets">Mapa Chalets</a></li>
+                        <li><a href="/Admin">Adm Consultas</a></li>
+                        <li><a href="/Chalets">Adm Chalets</a></li>
                     </ul>
                 </details>
             </li>
-            <!-- -->
             <li><a href="/Contacto">Contacto</a></li>
         </ul>
     </div>
