@@ -36,14 +36,14 @@ export default function BuscadorDisponibilidaHeader() {
                 <fieldset class="flex fieldset bg-base-200 border-base-300 rounded-box border p-2">
                     <div class="flex"><legend class="fieldset-legend">Ver Disponibilidad:</legend></div>
 
-                    <div class="flex gap-2"><label class="label">Check-In:</label>
-                        <input type="text" name="nombre" class="input" placeholder="Desde..." /></div>
+                    <div class="flex gap-2">
+                        <input type="text" name="checkIn" class="input" placeholder="Check-In:..." /></div>
 
-                    <div class="flex gap-2"><label class="label">Check-Out:</label>
-                        <input type="email" name="email" class="input" placeholder="Hasta..." /></div>
+                    <div class="flex gap-2">
+                        <input type="email" name="checkOut" class="input" placeholder="Check-Out:..." /></div>
 
                     <div class="flex gap-2"><label class="label">Huéspedes:</label>
-                        <input type="text" name="mensaje" class="input" placeholder="..." /></div>
+                        <input type="number" name="huespedes" class="input" placeholder="..." /></div>
 
                     <div><button class="btn btn-outline" type="submit">Consultar</button></div>
                 </fieldset>

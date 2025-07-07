@@ -1,0 +1,14 @@
+---
+import DetalleChalet from "../../components/DetalleChalet.tsx";
+import Layout from "../../layouts/Layout.astro";
+
+const { id } = Astro.params;
+
+if (!id) {
+    throw new Error("No se proporcionó un ID válido");
+}
+---
+
+<Layout>
+    <DetalleChalet id={id} />
+</Layout>

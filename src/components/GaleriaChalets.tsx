@@ -18,7 +18,7 @@ export default function ListadoChalets() {
             <Show when={casas()} fallback={<p>Cargando casas...</p>}>
                 <For each={casas()}>
                     {(casa) => (
-                        <a href="/DetalleChalet">
+                        <a href={`/casas/${casa.id}`}>
                             <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white p-2">
                                 <img
                                     alt={casa.nombre}
