@@ -8,8 +8,6 @@ export default defineConfig({
   // Opcional: tu dominio o URL base
   site: 'https://example.com',
 
-  output: 'server',
-
   // Puedes agregar aquí integraciones como Tailwind, MDX, etc.
 
   vite: {
